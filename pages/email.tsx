@@ -7,8 +7,8 @@ export default function EmailPage() {
         <title>Send Email</title>
       </Head>
       <div style={{ padding: '20px' }}>
-        <p>Contact us at:</p>
-        <a href="mailto:test@example.com">test@example.com</a>
+        <p>Contact us at: test@example.com</p>
+        <p>Email: <a href="mailto:test@example.com">test@example.com</a></p>
       </div>
     </>
   )
