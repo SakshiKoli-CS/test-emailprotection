@@ -8,7 +8,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; object-src 'none';"
+            value: "script-src 'self' 'strict-dynamic' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://ajax.cloudflare.com https:; object-src 'none';"
           }
         ]
       }
