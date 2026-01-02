@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { GetServerSideProps } from 'next'
 
 export default function EmailPage() {
   return (
@@ -13,12 +12,5 @@ export default function EmailPage() {
       </div>
     </>
   )
-}
-
-// Force Server-Side Rendering so Cloudflare can process the HTML
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    props: {},
-  }
 }
 
