@@ -1,4 +1,14 @@
 import Head from 'next/head'
+import { GetServerSideProps } from 'next'
+
+// Force dynamic rendering - disable static optimization
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  // Set cache control to prevent static optimization
+  context.res.setHeader('Cache-Control', 'no-store, must-revalidate')
+  return {
+    props: {},
+  }
+}
 
 export default function EmailPage() {
   return (
