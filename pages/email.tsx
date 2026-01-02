@@ -26,6 +26,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     'Cache-Control',
     'private, no-cache, no-store, must-revalidate'
   )
+  res.setHeader('X-Content-Type-Options', 'nosniff')
   
   return {
     props: {},
