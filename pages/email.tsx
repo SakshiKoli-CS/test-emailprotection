@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { GetServerSideProps } from 'next'
 
 export default function EmailPage() {
   return (
@@ -16,5 +17,18 @@ export default function EmailPage() {
       </div>
     </>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  // Set cache-control headers to force Cloudflare to bypass cache
+  // This matches the working page headers
+  res.setHeader(
+    'Cache-Control',
+    'private, no-cache, no-store, must-revalidate'
+  )
+  
+  return {
+    props: {},
+  }
 }
 
